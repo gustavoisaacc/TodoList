@@ -1,0 +1,36 @@
+.todo__campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #e1e1e1;
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+    
+}
+.todo--edit{
+    opacity: .5;
+}
+
+.completado{
+    opacity: 1;
+    color: green;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.completado--title{
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+.todo--delete:hover{
+    color: red
+}
+a{
+    color: #000;
+}

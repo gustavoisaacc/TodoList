@@ -1,0 +1,28 @@
+*,*::before ,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(26, 97, 204);
+}
+
+.app{
+    max-width: 1024px;
+    width: 90%;
+    margin: 5rem auto;
+    position: relative;
+}
+
+.mensaje{
+    font-size: 2.4rem;
+    text-align: center;
+    color: #e1e1e1;
+    text-transform: uppercase;
+}

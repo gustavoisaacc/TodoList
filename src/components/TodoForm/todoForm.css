@@ -1,0 +1,39 @@
+:root{
+    --primary:  rgb(26, 97, 204);
+}
+
+.todoFrom{
+    display: flex;
+    flex-direction: column;
+    background-color: #e1e1e1;
+    padding: 4rem;
+    width: 50%;
+    height: 50%;
+}
+.todoFrom textarea{
+    margin: 2rem 0;
+    outline: 1px solid var(--primary);
+}
+.todoFrom label{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: var(--primary);
+}
+
+
+.todoFrom__button--container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    color: #e1e1e1;
+}
