@@ -7,6 +7,9 @@ import CreateTodoBoton from './components/CreateTodoBoton';
 import Modal from './components/Modal';
 import TodoForm from './components/TodoForm';
 
+import Loading from './components/SataeLouding/Loading';
+import Mensaje from './components/SataeLouding/Mensaje';
+
 import './App.css';
 import { useContext } from 'react';
 //  const todoList = [
@@ -25,7 +28,8 @@ function App() {
     completedTodo,
     deleteTodo,
     openModal,
-    setOpenModal
+    setOpenModal,
+    todoCount
   } = useContext(TodoContext)
 
 
@@ -33,9 +37,12 @@ function App() {
     <div className="app">
       <TodoCounter/>
       <TodoSearch/>
-      <TodoList>
-        {loading && <p className='mensaje'>CARGARNDO...</p>}
-        {(!loading && !searchTodos.length) && <p className='mensaje'>!Crea tus Tareas¡</p> }
+      <TodoList
+        // onError ={ () => <Loading/> }
+      >
+        {loading && <Loading/>}
+        {(!loading && !todoCount) && <Mensaje msg='!Crea un nuevo Todo¡'/> }
+        {(!!todoCount && !searchTodos.length) && <Mensaje msg='No hay resultados' /> }
         {
           searchTodos.map(todo => 
             (<TodoItem 
