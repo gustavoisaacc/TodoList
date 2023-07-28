@@ -1,0 +1,30 @@
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e1e1e1;
+    padding: 0 5rem;
+    gap: 5rem;
+    box-shadow: 1px 1px 6px 0px #e1e1e1;
+    background-color: white;
+    width: 350px;
+    flex-grow: 0;
+  }
+
+  .taskContainer h1{
+    font-size: 3rem;
+    text-align: center;
+    color: orange;
+    margin-top: 5rem;
+  }
+
+  .createTask{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageContainer img{
+    width: 30rem;
+    height: 50rem;
+
+  }
