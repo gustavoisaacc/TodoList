@@ -7,7 +7,7 @@ export function TaskList({children}) {
     return (
         <div className="taskList">
             <h1>{completedTodos} todo Completado de {totalTodos}</h1>
-            <input type="text" name="" id="" />
+            <input className='inputSearch' type="text" name="" id="" />
             <ul>
                 {children}
             </ul>

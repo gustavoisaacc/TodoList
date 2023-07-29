@@ -17,7 +17,7 @@ function App() {
       {
         listTodo
         ?(<TaskList>
-            {todos.map((todo)=> <List key={todo.title} todo={todo}/>)}
+          {todos.map((todo)=> <List key={todo.title} todo={todo}/>)}
         </TaskList>)
         :(<Welcome/>)
       }
