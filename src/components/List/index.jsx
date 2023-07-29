@@ -5,15 +5,14 @@ import Edit from './Edit';
 import './list.css'
 
 function List({todo}) {
-    console.log(todo.complete)
     return (
         <li className='list'>
-            <Check className="icon icon--check"/>
+            <Check todo={todo}/>
             <span className={`${todo.complete ? 'text--checked' : ''}`}>
-            {todo.title}
+                {todo.title}
             </span>
-            <Edit className="icon icon--edit"/>
-            <DeleteIcon todos={todo} className="icon icon--delete"/>
+            <Edit/>
+            <DeleteIcon todos={todo}/>
         </li>
     );
 }

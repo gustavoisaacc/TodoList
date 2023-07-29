@@ -6,11 +6,12 @@ import {TodoContext} from '../../TodoContext'
 
 import './list.css'
 
-function Check() {
-  const {completeItem, todos} = useContext(TodoContext)
+function Check({todo}) {
+  const {completeItem} = useContext(TodoContext)
+
   return (
-    <div onClick={() => completeItem(todos.title)}>
-      <AiFillCheckCircle  className={`icon icon--check ${todos.complete ? 'icon--check' : ''}`}/>
+    <div onClick={() => completeItem(todo.title)}>
+      <AiFillCheckCircle  className={`icon icon--check ${todo.complete ? 'checked' : ''}`}/>
     </div>
   );
 }

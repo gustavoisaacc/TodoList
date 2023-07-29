@@ -24,11 +24,10 @@
     fill: red;
 }
 
-.icon--check {
+.checked {
     fill: green;
 }
 
 .text--checked {
-    
     text-decoration: line-through;
 }

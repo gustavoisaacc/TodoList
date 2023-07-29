@@ -3,11 +3,11 @@ import './taskList.css'
 import { TodoContext } from '../../TodoContext';
 /* eslint-disable react/prop-types */
 export function TaskList({children}) {
-    const {totalTodos, completedTodos} = useContext(TodoContext)
+    const {totalTodos, completedTodos,serch, setSerch} = useContext(TodoContext)
     return (
         <div className="taskList">
             <h1>{completedTodos} todo Completado de {totalTodos}</h1>
-            <input className='inputSearch' type="text" name="" id="" />
+            <input value={serch} onChange={(e) => setSerch(e.target.value)} className='inputSearch' type="text" name="" id="" />
             <ul>
                 {children}
             </ul>

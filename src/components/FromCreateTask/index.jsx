@@ -17,6 +17,7 @@ function FromCreateTask() {
     const handleSubmit = (event) => {
         event.preventDefault()
         addTask(taskList)
+        setTask('')
     }
 
     return (
