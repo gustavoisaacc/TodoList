@@ -21,7 +21,7 @@ h1{
 
 @media(max-width: 980px) {
     .taskList {
-        width: 500px;
+        width: 90%;
     }
 }
 
