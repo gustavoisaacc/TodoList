@@ -7,7 +7,7 @@ export function TaskList({children}) {
     return (
         <div className="taskList">
             <h1>{completedTodos} todo Completado de {totalTodos}</h1>
-            <input value={serch} onChange={(e) => setSerch(e.target.value)} className='inputSearch' type="text" name="" id="" />
+            <input value={serch} onChange={(e) => setSerch(e.target.value)} className='inputSearch' type="text" />
             <ul>
                 {children}
             </ul>
@@ -17,4 +17,4 @@ export function TaskList({children}) {
 
 
 
-export const Welcome = () => {return (<div className='addTask'><h2>Ingrese una tarea</h2></div>)}
+export const Welcome = () => {return (<div className='add--task'><h2>Ingrese una tarea</h2></div>)}
