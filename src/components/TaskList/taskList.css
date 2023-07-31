@@ -22,6 +22,8 @@ h1{
 @media(max-width: 980px) {
     .taskList {
         width: 90%;
+        height: 100%;
+        overflow: auto;
     }
 }
 
