@@ -1,7 +1,7 @@
 
 import Check from './Check';
 import DeleteIcon from './DeleteIcon';
-import Edit from './Edit';
+// import Edit from './Edit';
 import './list.css'
 
 function List({todo}) {
@@ -11,7 +11,7 @@ function List({todo}) {
             <span className={`${todo.complete ? 'text--checked' : ''}`}>
                 {todo.title}
             </span>
-            <Edit/>
+            {/* <Edit todo={todo}/> */}
             <DeleteIcon todos={todo}/>
         </li>
     );

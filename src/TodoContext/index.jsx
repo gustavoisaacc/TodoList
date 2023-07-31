@@ -5,14 +5,15 @@ const TodoContext = createContext()
 function TaskProvider(props) {
     const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
     const [serch, setSerch] = useState('');
+    // const [edit, setEdit] = useState(null);
     const listTodo = todos.length !== 0;
     
     const totalTodos = todos.length;
     const completedTodos = todos.filter(item => item.complete).length;
 
     const addTask = (taskList) => {
-        const newTask = [...todos, taskList]
-        saveTodos(newTask)
+        const newTask = [...todos, taskList];
+        saveTodos(newTask);
     }
 
     const completeItem = (text) => {
@@ -29,10 +30,23 @@ function TaskProvider(props) {
         saveTodos(newTodos)
     }
 
+    // const editTodo = (text) => {
+    //     const newTodos = [...todos]
+    //     const editText = newTodos.find(todo => todo.title === text )
+    //     setEdit(editText)
+    // }
+
+    // const updateTodos = (title, complete) => {
+    //     const newTodo = todos.map(todo => 
+    //         todo.title === title ? {title, complete} : todos
+    //     )
+    //     saveTodos(newTodo)
+    // } 
+
     const serchedTodos = todos.filter(todo => {
-        const todoText = todo.text.toLowerCase();
+        const todoText = todo.title.toLowerCase();
         const serchText = serch.toLowerCase();
-        return todoText.includes(serchText)
+        return todoText.includes(serchText);
     })
     
     return (
@@ -47,7 +61,12 @@ function TaskProvider(props) {
             completeItem,
             serch,
             setSerch,
-            serchedTodos
+            serchedTodos,
+            // editTodo,
+            // edit,
+            // setEdit,
+            // updateTodos
+            
         }}
         >
             {props.children}

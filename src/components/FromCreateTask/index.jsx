@@ -20,6 +20,7 @@ function FromCreateTask() {
         setTask('')
     }
 
+
     return (
         <form onSubmit={handleSubmit}>
             <input onChange={e => setTask(e.target.value)} value={task} className='inputTask' placeholder='Task' type="text" name="" id="" />

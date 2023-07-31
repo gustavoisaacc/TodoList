@@ -1,10 +1,13 @@
 import { AiFillEdit } from "react-icons/ai";
 import './list.css'
+import { useContext } from "react";
+import { TodoContext } from "../../TodoContext";
 
 
-function Edit() {
+function Edit({todo}) {
+    const {editTodo} = useContext(TodoContext)
     return (
-        <div className='icon'>
+        <div onClick={() => editTodo(todo.title)}>
            <AiFillEdit className="icon icon--edit"/>
         </div>
     );

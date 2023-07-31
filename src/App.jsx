@@ -9,7 +9,7 @@ import './App.css';
 
 
 function App() {
-  const {todos, listTodo} = useContext(TodoContext)
+  const {serchedTodos, listTodo} = useContext(TodoContext)
   
   return (
     <main className="container">
@@ -17,7 +17,7 @@ function App() {
       {
         listTodo
         ?(<TaskList>
-          {todos.map((todo)=> <List key={todo.title} todo={todo}/>)}
+          {serchedTodos.map((todo)=> <List key={todo.title} todo={todo}/>)}
         </TaskList>)
         :(<Welcome/>)
       }

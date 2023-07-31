@@ -19,3 +19,7 @@ h2{
     outline: #e1e1e1;
     color: var(--gray-light);
 }
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
