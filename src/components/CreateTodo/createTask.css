@@ -28,3 +28,19 @@
     height: 50rem;
 
   }
+
+  @media(max-width: 880px) {
+    .taskContainer{
+      width: 100%;
+      display: block;
+      padding: 6rem 2rem;
+    }
+    .imageContainer img{
+      display: none;
+  
+    }
+    .taskContainer h1{
+      margin: 0;
+      margin-bottom: 5rem;
+    }
+  }
