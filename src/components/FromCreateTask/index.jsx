@@ -16,14 +16,18 @@ function FromCreateTask() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        addTask(taskList)
-        setTask('')
+        if(task === '' || task.length < 3){
+            alert('ingrese una tarea valida')
+        }else{
+            addTask(taskList)
+            setTask('')
+        }
     }
 
 
     return (
         <form onSubmit={handleSubmit}>
-            <input onChange={e => setTask(e.target.value)} value={task} className='inputTask' placeholder='Task' type="text" name="" id="" />
+            <input onChange={e => setTask(e.target.value)} value={task} className='inputTask' placeholder='Task' type="text" required />
             <button className='btnTask'>Crear</button>
         </form>
     );
