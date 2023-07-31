@@ -17,4 +17,4 @@ export function TaskList({children}) {
 
 
 
-export const Welcome = () => {return (<h2>Ingrese una tarea</h2>)}
+export const Welcome = () => {return (<div className='add-task'><h2>Ingrese una tarea</h2></div>)}
